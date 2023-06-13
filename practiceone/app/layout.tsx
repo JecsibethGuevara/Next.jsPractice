@@ -1,11 +1,14 @@
+'use client'
 import './globals.css'
-import { Montserrat} from 'next/font/google'
+import {GlobalProvider} from './context/GlobalContext'
+import Navigation from '@/components/Navigation'
+//import { Montserrat} from 'next/font/google'
 
 
-const montserrat = Montserrat({
-    subsets: ['latin'], 
-    weight: ['100', '400', '700' ] 
-  })
+// const montserrat = Montserrat({
+//     subsets: ['latin'], 
+//     weight: ['100', '400', '700' ] 
+//   })
 
 export const metadata = {
   title: 'Create Next App',
@@ -17,14 +20,17 @@ export default function RootLayout({children,}: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>
-        
-        <main className='container'>
-            
-        </main>
-        
-      </body>
-    </html>
+    <GlobalProvider>
+      <html lang="en">
+        <body >
+          
+          <main className='container'>
+            <Navigation/>
+              {children}
+          </main>
+          
+        </body>
+      </html>
+    </GlobalProvider>
   )
 }
