@@ -26,6 +26,10 @@ const GlobalProvider = ({children}) => {
         setUser([...user, {id, username, password}])
     }
 
+    const deleteUser = (id) =>{
+        user.findIndex(id)
+    }
+
 
  
     return (
