@@ -1,6 +1,5 @@
 'use client'
 import LoginForm from '../../components/LoginForm'
-import { GlobalProvider } from '../context/GlobalContext';
 
 export const metadata = {
   title: 'Login',
@@ -13,7 +12,6 @@ export default function RootLayout({children,}: {
 }) {
 
   return (
-      <GlobalProvider>
         <main className='container flex-center'>
             <div className="loginContainer">
                 <LoginForm />    
@@ -23,7 +21,6 @@ export default function RootLayout({children,}: {
             </div>
             
         </main>
-      </GlobalProvider>
   
   )
 }

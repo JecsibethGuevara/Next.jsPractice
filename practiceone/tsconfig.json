@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "styles/loginstyles.js", "styles/navigationStyles.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "styles/loginstyles.js", "styles/navigationStyles.js", "app/users/[id]"],
   "exclude": ["node_modules"]
 }
